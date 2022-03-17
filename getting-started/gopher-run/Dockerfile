@@ -14,7 +14,7 @@ RUN CGO_ENABLED=0 GO111MODULE=on GOOS=linux go build -v -o main ./cmd
 
 # Use a Docker multi-stage build to create a lean production image.
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
-FROM alpine
+FROM alpine:3.15
 RUN apk add --no-cache ca-certificates
 
 # Copy the binary to the production image from the builder stage.
