@@ -33,7 +33,7 @@ RUN go build -mod=readonly -v -o server
 # Use a Docker multi-stage build to create a lean production image.
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 # https://hub.docker.com/_/ubuntu
-FROM ubuntu
+FROM ubuntu:20.04
 
 # [START cloudrun_system_package_ubuntu]
 # [START run_system_package_ubuntu]
